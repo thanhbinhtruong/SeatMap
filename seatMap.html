@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Seat Map</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="myjs.js"></script>
+
+
+<style>
+div.tooltip {
+	position: absolute;
+	text-align: center;
+	width: 60px;
+	height: 28px;
+	padding: 2px;
+	font: 12px sans-serif;
+	background: lightsteelblue;
+	border: 0px;
+	border-radius: 8px;
+	pointer-events: none;
+}
+
+#minimap {
+	position: absolute;
+	right: 15px;
+	top: 25px;
+	background-color: transparent;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+ 
+
+#image:hover {
+  transform: scale(1.003)
+}
+ 
+</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-6">
+				<button id="reset">Reset</button>
+				<button id="zoomIn">ZoomIn</button>
+				<button id="zoomOut">ZoomOut</button>
+				<div id="seatMap"></div>
+				<div id="minimap"></div>
+			</div>
+
+
+			<div class="col-sm-6 row">
+				<table id="dataTable" class="table">
+					<tr>
+						<th>Section</th>
+						<th>Row</th>
+						<th>Seat</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function() {
+			main();
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
